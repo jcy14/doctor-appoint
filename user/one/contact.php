@@ -14,6 +14,8 @@ if (isset($_SESSION['loggedin']) && isset($_SESSION['user_id']) && isset($_SESSI
     try {
         // Get database connection
         $pdo = getDBConnection();
+
+
         
         // Get patient data for header
         $stmt = $pdo->prepare("
