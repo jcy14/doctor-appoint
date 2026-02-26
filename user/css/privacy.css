@@ -1,0 +1,278 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    padding: 20px;
+}
+
+.terms-container {
+    width: 100%;
+    max-width: 600px;
+    height: 80vh;
+
+    /* Height for scrolling */
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    margin: 40px 0;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.terms-header {
+    padding: 20px 30px;
+    background: #f8f9fa;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.terms-header h1 {
+    color: #2d3436;
+    font-size: 24px;
+    flex: 1;
+    text-align: center;
+    margin: 0;
+}
+
+.terms-header a {
+    text-decoration: none;
+    color: #636e72;
+    font-size: 14px;
+    /* Smaller font as requested */
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+    position: absolute;
+    /* Keep it on the left without pushing h1 */
+    left: 30px;
+}
+
+.terms-header a:hover {
+    color: #2d3436;
+}
+
+.terms-header a i {
+    font-size: 14px;
+}
+
+
+
+
+/* Container for scrollable content */
+.terms-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.terms-text {
+    padding: 20px;
+    flex: 1;
+    overflow-y: auto;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #333;
+    text-align: justify;
+    text-justify: inter-word;
+    hyphens: auto;
+    word-spacing: -0.05em;
+}
+
+.terms-text h3 {
+    margin-top: 20px;
+    color: #636e72;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.terms-text p {
+    margin-bottom: 15px;
+    color: #555;
+}
+
+/* Scrollbar styling */
+.terms-text::-webkit-scrollbar {
+    width: 10px;
+}
+
+.terms-text::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 5px;
+}
+
+.terms-text::-webkit-scrollbar-thumb {
+    background: #636e72;
+    border-radius: 5px;
+}
+
+.terms-text::-webkit-scrollbar-thumb:hover {
+    background: #636e72;
+}
+
+.terms-footer {
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-top: 1px solid #eee;
+}
+
+
+
+
+
+.terms-header {
+    padding: 20px 30px;
+    background: #f8f9fa;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.terms-header h1 {
+    color: #2d3436;
+    font-size: 24px;
+    flex: 1;
+    text-align: center;
+    margin: 0;
+}
+
+.terms-header a {
+    text-decoration: none;
+    color: #636e72;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+    position: absolute;
+}
+
+.terms-header a:first-child {
+    left: 30px;
+}
+
+.terms-header a:last-child {
+    right: 30px;
+}
+
+.terms-header a:hover {
+    color: #2d3436;
+}
+
+.terms-header a i {
+    font-size: 14px;
+}
+
+
+
+/* Button container */
+.button-container {
+    display: flex;
+    gap: 16px;
+    width: 100%;
+}
+
+/* Button styles*/
+.accept-btn {
+    flex: 1;
+    padding: 14px;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+
+.accept-btn {
+    background: #74b9ff;
+}
+
+.accept-btn:hover {
+    background: #0984e3;
+}
+
+.accept-btn:disabled {
+    background: #b2bec3;
+    cursor: not-allowed;
+}
+
+
+
+
+
+
+.declined-btn {
+    flex: 1;
+    padding: 14px;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.declined-btn {
+    background: #ff7675;
+}
+
+.declined-btn:hover {
+    background: #d63031;
+}
+
+.declined-btn:disabled {
+    background: #b2bec3;
+    cursor: not-allowed;
+}
+
+.exit-button {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.9);
+    border: none;
+    border-radius: 50%;
+    font-size: 24px;
+    font-weight: bold;
+    color: #666;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    z-index: 100;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.exit-button:hover {
+    background: #ff7675;
+    color: white;
+    transform: scale(1.1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.exit-button:active {
+    transform: scale(0.95);
+}

@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Error - MedCare</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #4a6bdf;
+            --secondary-color: #2d3748;
+            --error-color: #e53e3e;
+            --background-color: #f7fafc;
+            --text-color: #2d3748;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--background-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 2rem;
+        }
+
+        .error-container {
+            text-align: center;
+            max-width: 600px;
+            padding: 2rem;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .error-icon {
+            font-size: 4rem;
+            color: var(--error-color);
+            margin-bottom: 1.5rem;
+        }
+
+        h1 {
+            color: var(--secondary-color);
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        p {
+            color: #4a5568;
+            margin-bottom: 2rem;
+        }
+
+        .error-code {
+            display: inline-block;
+            background-color: #edf2f7;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            font-family: monospace;
+            margin-bottom: 2rem;
+        }
+
+        .btn-group {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            padding: 0.75rem 1.5rem;
+            text-decoration: none;
+            border-radius: 6px;
+            transition: all 0.3s ease;
+            font-weight: 500;
+        }
+
+        .btn-primary {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background-color: #3652b3;
+            transform: translateY(-2px);
+        }
+
+        .btn-secondary {
+            background-color: #edf2f7;
+            color: var(--secondary-color);
+        }
+
+        .btn-secondary:hover {
+            background-color: #e2e8f0;
+            transform: translateY(-2px);
+        }
+
+        .btn i {
+            margin-right: 0.5rem;
+        }
+
+        @media (max-width: 480px) {
+            .error-container {
+                padding: 1.5rem;
+            }
+
+            h1 {
+                font-size: 1.5rem;
+            }
+
+            .error-icon {
+                font-size: 3rem;
+            }
+
+            .btn-group {
+                flex-direction: column;
+            }
+
+            .btn {
+                width: 100%;
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="error-container">
+        <i class="fas fa-exclamation-triangle error-icon"></i>
+        <h1>Oops! Something Went Wrong</h1>
+        <p>We encountered an error while processing your request. This could be temporary, please try again or contact support if the problem persists.</p>
+        <div class="error-code" id="errorCode">Error Code: 500</div>
+        <div class="btn-group">
+            <a href="javascript:history.back()" class="btn btn-secondary">
+                <i class="fas fa-arrow-left"></i>
+                Go Back
+            </a>
+            <a href="../one/contact.php" class="btn btn-primary">
+                <i class="fas fa-headset"></i>
+                Contact Support
+            </a>
+        </div>
+    </div>
+
+    <script>
+        // Get error code from URL parameter if available
+        window.addEventListener('load', function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const errorCode = urlParams.get('code') || '500';
+            document.getElementById('errorCode').textContent = `Error Code: ${errorCode}`;
+        });
+    </script>
+</body>
+</html> 

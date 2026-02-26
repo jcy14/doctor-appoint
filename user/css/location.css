@@ -1,0 +1,150 @@
+:root {
+    --primary-color: #0061ff;
+    --primary-dark: #0052d9;
+    --text-color: #2d3436;
+    --text-light: #636e72;
+    --bg-light: #f8f9fa;
+    --white: #ffffff;
+    --shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    --border-radius: 10px;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    background-color: var(--bg-light);
+    color: var(--text-color);
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    background: var(--white);
+    padding: 30px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+}
+
+h1 {
+    color: var(--text-color);
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+/* Map specific styles */
+#map {
+    height: 500px;
+    width: 100%;
+    border-radius: var(--border-radius);
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+    /* Ensure map stays below other potential overlays */
+}
+
+/* Controls Section */
+.map-controls {
+    background: var(--bg-light);
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: var(--text-color);
+    font-weight: 500;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+}
+
+.coordinates-inputs {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.button-group {
+    display: flex;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    flex: 1;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: var(--white);
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-dark);
+    transform: translateY(-2px);
+}
+
+.btn-secondary {
+    background-color: var(--text-light);
+    /* Using text-light as a gray for secondary */
+    color: var(--white);
+}
+
+.btn-secondary:hover {
+    background-color: var(--text-color);
+    transform: translateY(-2px);
+}
+
+.coordinates-info {
+    text-align: center;
+    margin-bottom: 15px;
+    color: var(--text-light);
+    font-size: 0.9rem;
+    padding: 10px;
+    background: #eef2f7;
+    border-radius: 5px;
+}
+
+@media (max-width: 768px) {
+    .coordinates-inputs {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .button-group {
+        flex-direction: column;
+    }
+
+    .container {
+        padding: 15px;
+    }
+
+    #map {
+        height: 350px;
+    }
+}
