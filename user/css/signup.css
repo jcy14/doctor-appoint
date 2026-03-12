@@ -335,11 +335,54 @@ body {
     cursor: pointer;
 }
 
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.modal-header h2 {
+    font-size: 18px;
+    color: #2d3436;
+    margin: 0;
+}
+
+.modal-instruction {
+    font-size: 13px;
+    color: #636e72;
+    margin-bottom: 10px;
+}
+
 #map {
     height: 400px;
     width: 100%;
-    margin-top: 10px;
     border-radius: 4px;
+    border: 1px solid #dfe6e9;
+    z-index: 0;
+}
+
+.confirm-location-btn {
+    width: 100%;
+    padding: 12px;
+    margin-top: 12px;
+    background: #0984e3;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.confirm-location-btn:hover {
+    background: #0773c5;
+}
+
+.confirm-location-btn:disabled {
+    background: #b2bec3;
+    cursor: not-allowed;
 }
 
 .address-field-wrapper {

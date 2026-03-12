@@ -60,7 +60,7 @@ class Auth {
             case 'patient':
                 return '../one/patient_home.php';
             case 'admin':
-                return '../html/admin.html';
+                return '../one/admin.php';
             default:
                 return 'index.php';
         }

@@ -4004,3 +4004,117 @@ Stack trace:
 [24-Feb-2026 17:24:40 Asia/Manila] Rate limiting disabled - Redis not available
 [24-Feb-2026 17:24:46 Asia/Manila] Redis extension is not loaded
 [24-Feb-2026 17:24:46 Asia/Manila] Rate limiting disabled - Redis not available
+[02-Mar-2026 09:25:30 Asia/Manila] Redis extension is not loaded
+[02-Mar-2026 09:30:12 Asia/Manila] Redis extension is not loaded
+[02-Mar-2026 09:43:17 Asia/Manila] Redis extension is not loaded
+[02-Mar-2026 09:45:46 Asia/Manila] Redis extension is not loaded
+[02-Mar-2026 16:16:30 Asia/Manila] Redis extension is not loaded
+[02-Mar-2026 16:16:33 Asia/Manila] Redis extension is not loaded
+[02-Mar-2026 16:16:33 Asia/Manila] Rate limiting disabled - Redis not available
+[02-Mar-2026 16:16:44 Asia/Manila] Redis extension is not loaded
+[02-Mar-2026 16:16:44 Asia/Manila] Rate limiting disabled - Redis not available
+[02-Mar-2026 16:16:55 Asia/Manila] Redis extension is not loaded
+[02-Mar-2026 16:16:55 Asia/Manila] Rate limiting disabled - Redis not available
+[02-Mar-2026 16:17:13 Asia/Manila] Redis extension is not loaded
+[02-Mar-2026 16:17:13 Asia/Manila] Rate limiting disabled - Redis not available
+[02-Mar-2026 16:18:25 Asia/Manila] Redis extension is not loaded
+[02-Mar-2026 16:18:25 Asia/Manila] Rate limiting disabled - Redis not available
+[02-Mar-2026 16:19:03 Asia/Manila] Redis extension is not loaded
+[02-Mar-2026 16:19:03 Asia/Manila] Rate limiting disabled - Redis not available
+[02-Mar-2026 16:19:15 Asia/Manila] Redis extension is not loaded
+[02-Mar-2026 16:19:15 Asia/Manila] Rate limiting disabled - Redis not available
+[02-Mar-2026 16:19:18 Asia/Manila] Redis extension is not loaded
+[02-Mar-2026 16:19:18 Asia/Manila] Rate limiting disabled - Redis not available
+[02-Mar-2026 16:19:20 Asia/Manila] Redis extension is not loaded
+[02-Mar-2026 16:19:20 Asia/Manila] Rate limiting disabled - Redis not available
+[02-Mar-2026 16:19:24 Asia/Manila] Redis extension is not loaded
+[02-Mar-2026 16:19:24 Asia/Manila] Rate limiting disabled - Redis not available
+[02-Mar-2026 16:19:30 Asia/Manila] Redis extension is not loaded
+[02-Mar-2026 16:19:30 Asia/Manila] Rate limiting disabled - Redis not available
+[02-Mar-2026 16:19:37 Asia/Manila] Redis extension is not loaded
+[02-Mar-2026 16:19:37 Asia/Manila] Rate limiting disabled - Redis not available
+[02-Mar-2026 16:19:40 Asia/Manila] Redis extension is not loaded
+[02-Mar-2026 16:19:40 Asia/Manila] Rate limiting disabled - Redis not available
+[02-Mar-2026 16:19:43 Asia/Manila] Redis extension is not loaded
+[02-Mar-2026 16:19:43 Asia/Manila] Rate limiting disabled - Redis not available
+[02-Mar-2026 16:19:47 Asia/Manila] Logout error: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'akasi.login_logs' doesn't exist
+[02-Mar-2026 16:19:51 Asia/Manila] Redis extension is not loaded
+[02-Mar-2026 16:21:02 Asia/Manila] Redis extension is not loaded
+[02-Mar-2026 16:21:14 Asia/Manila] Redis extension is not loaded
+[02-Mar-2026 16:21:14 Asia/Manila] Rate limiting disabled - Redis not available
+[02-Mar-2026 16:21:21 Asia/Manila] Logout error: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'akasi.login_logs' doesn't exist
+[02-Mar-2026 16:21:34 Asia/Manila] Redis extension is not loaded
+[02-Mar-2026 16:23:59 Asia/Manila] Redis extension is not loaded
+[02-Mar-2026 16:24:03 Asia/Manila] Redis extension is not loaded
+[02-Mar-2026 16:24:22 Asia/Manila] Redis extension is not loaded
+[02-Mar-2026 16:24:22 Asia/Manila] Redis extension is not loaded
+[02-Mar-2026 16:24:26 Asia/Manila] Redis extension is not loaded
+[02-Mar-2026 16:24:26 Asia/Manila] Redis extension is not loaded
+[02-Mar-2026 16:24:27 Asia/Manila] Redis extension is not loaded
+[02-Mar-2026 16:24:30 Asia/Manila] Redis extension is not loaded
+[02-Mar-2026 16:24:30 Asia/Manila] Redis extension is not loaded
+[02-Mar-2026 16:24:31 Asia/Manila] Redis extension is not loaded
+[02-Mar-2026 16:24:39 Asia/Manila] Redis extension is not loaded
+[02-Mar-2026 16:24:39 Asia/Manila] Redis extension is not loaded
+[02-Mar-2026 16:24:43 Asia/Manila] Redis extension is not loaded
+[02-Mar-2026 16:25:40 Asia/Manila] Redis extension is not loaded
+[02-Mar-2026 16:25:40 Asia/Manila] Redis extension is not loaded
+[02-Mar-2026 16:25:42 Asia/Manila] Redis extension is not loaded
+[02-Mar-2026 16:25:43 Asia/Manila] Redis extension is not loaded
+[02-Mar-2026 16:25:51 Asia/Manila] Redis extension is not loaded
+[02-Mar-2026 16:26:21 Asia/Manila] Redis extension is not loaded
+[02-Mar-2026 16:26:23 Asia/Manila] Redis extension is not loaded
+[02-Mar-2026 16:32:17 Asia/Manila] Redis extension is not loaded
+[02-Mar-2026 16:32:17 Asia/Manila] Redis extension is not loaded
+[02-Mar-2026 16:32:34 Asia/Manila] Logout error: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'akasi.login_logs' doesn't exist
+[02-Mar-2026 16:32:40 Asia/Manila] Redis extension is not loaded
+[02-Mar-2026 16:32:40 Asia/Manila] Rate limiting disabled - Redis not available
+[02-Mar-2026 16:34:18 Asia/Manila] Redis extension is not loaded
+[02-Mar-2026 16:34:18 Asia/Manila] Rate limiting disabled - Redis not available
+[02-Mar-2026 16:34:37 Asia/Manila] Logout error: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'akasi.login_logs' doesn't exist
+[09-Mar-2026 12:46:42 Asia/Manila] Redis extension is not loaded
+[09-Mar-2026 13:02:03 Asia/Manila] Redis extension is not loaded
+[09-Mar-2026 13:02:21 Asia/Manila] Redis extension is not loaded
+[09-Mar-2026 13:02:45 Asia/Manila] Redis extension is not loaded
+[09-Mar-2026 13:02:51 Asia/Manila] Redis extension is not loaded
+[09-Mar-2026 13:02:52 Asia/Manila] Redis extension is not loaded
+[09-Mar-2026 13:02:55 Asia/Manila] Redis extension is not loaded
+[09-Mar-2026 13:02:57 Asia/Manila] Redis extension is not loaded
+[09-Mar-2026 13:02:57 Asia/Manila] Redis extension is not loaded
+[09-Mar-2026 13:03:01 Asia/Manila] Redis extension is not loaded
+[09-Mar-2026 13:03:08 Asia/Manila] Redis extension is not loaded
+[09-Mar-2026 13:03:08 Asia/Manila] Redis extension is not loaded
+[09-Mar-2026 13:03:17 Asia/Manila] Redis extension is not loaded
+[09-Mar-2026 13:03:19 Asia/Manila] Redis extension is not loaded
+[09-Mar-2026 13:05:04 Asia/Manila] Redis extension is not loaded
+[09-Mar-2026 13:05:11 Asia/Manila] Redis extension is not loaded
+[09-Mar-2026 13:21:50 Asia/Manila] Redis extension is not loaded
+[09-Mar-2026 13:23:59 Asia/Manila] Redis extension is not loaded
+[09-Mar-2026 13:24:05 Asia/Manila] Redis extension is not loaded
+[09-Mar-2026 13:24:39 Asia/Manila] Redis extension is not loaded
+[09-Mar-2026 13:27:22 Asia/Manila] Redis extension is not loaded
+[09-Mar-2026 13:27:23 Asia/Manila] Signup error: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '123456' for key 'LicenseNumber'
+[09-Mar-2026 13:27:23 Asia/Manila] Redis extension is not loaded
+[09-Mar-2026 13:27:35 Asia/Manila] Redis extension is not loaded
+[09-Mar-2026 13:27:37 Asia/Manila] Redis extension is not loaded
+[09-Mar-2026 13:27:38 Asia/Manila] Signup error: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '123456' for key 'LicenseNumber'
+[09-Mar-2026 13:27:38 Asia/Manila] Redis extension is not loaded
+[10-Mar-2026 15:14:31 Asia/Manila] Redis extension is not loaded
+[11-Mar-2026 18:14:18 Asia/Manila] Redis extension is not loaded
+[12-Mar-2026 12:58:07 Asia/Manila] Redis extension is not loaded
+[12-Mar-2026 12:59:18 Asia/Manila] Redis extension is not loaded
+[12-Mar-2026 12:59:18 Asia/Manila] Rate limiting disabled - Redis not available
+[12-Mar-2026 12:59:30 Asia/Manila] Redis extension is not loaded
+[12-Mar-2026 12:59:30 Asia/Manila] Rate limiting disabled - Redis not available
+[12-Mar-2026 12:59:33 Asia/Manila] Redis extension is not loaded
+[12-Mar-2026 12:59:33 Asia/Manila] Rate limiting disabled - Redis not available
+[12-Mar-2026 12:59:39 Asia/Manila] Redis extension is not loaded
+[12-Mar-2026 12:59:39 Asia/Manila] Rate limiting disabled - Redis not available
+[12-Mar-2026 13:00:02 Asia/Manila] Redis extension is not loaded
+[12-Mar-2026 13:00:03 Asia/Manila] Rate limiting disabled - Redis not available
+[12-Mar-2026 13:02:15 Asia/Manila] Logout error: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'akasi.login_logs' doesn't exist
+[12-Mar-2026 13:02:52 Asia/Manila] Redis extension is not loaded
+[12-Mar-2026 13:03:20 Asia/Manila] Redis extension is not loaded
+[12-Mar-2026 13:05:00 Asia/Manila] Redis extension is not loaded
+[12-Mar-2026 13:05:26 Asia/Manila] Redis extension is not loaded
+[12-Mar-2026 13:05:41 Asia/Manila] Redis extension is not loaded

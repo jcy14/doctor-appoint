@@ -1,9 +1,7 @@
-// State management
 const signupState = {
     isLoading: false
 };
 
-// Cache DOM elements
 const elements = {
     signupForm: document.getElementById('signupForm'),
     doctorRadio: document.getElementById('doctor'),
@@ -76,6 +74,7 @@ function setupFormPersistence() {
         if (formData.name) elements.nameInput.value = formData.name;
         if (formData.email) elements.emailInput.value = formData.email;
         if (formData.phone) elements.phoneInput.value = formData.phone;
+
         // Passwords are usually NOT restored for security, but user requested "details entered remain"
         // We will restore them for better UX in this specific flow (Privacy/Terms review)
         if (formData.password) elements.passwordInput.value = formData.password;
@@ -104,6 +103,16 @@ function setupFormPersistence() {
         const experienceInput = document.getElementById('experience');
         if (formData.experience && experienceInput) experienceInput.value = formData.experience;
 
+        // Restore Address
+        const addressInput = document.getElementById('address');
+        if (formData.address && addressInput) addressInput.value = formData.address;
+
+        // Restore Map Location
+        const clinicLatInput = document.getElementById('clinic_lat');
+        const clinicLngInput = document.getElementById('clinic_lng');
+        if (formData.clinic_lat && clinicLatInput) clinicLatInput.value = formData.clinic_lat;
+        if (formData.clinic_lng && clinicLngInput) clinicLngInput.value = formData.clinic_lng;
+
 
     } catch (e) {
         console.error('Error restoring form data', e);
@@ -124,7 +133,10 @@ function saveFormData() {
         gender: document.querySelector('input[name="gender"]:checked')?.value,
         birthday: document.getElementById('birthday')?.value,
         bio: document.getElementById('bio')?.value,
-        experience: document.getElementById('experience')?.value
+        experience: document.getElementById('experience')?.value,
+        address: document.getElementById('address')?.value,
+        clinic_lat: document.getElementById('clinic_lat')?.value,
+        clinic_lng: document.getElementById('clinic_lng')?.value
     };
     localStorage.setItem('signup_form_data', JSON.stringify(formData));
 }
@@ -351,3 +363,91 @@ function hideLoader() {
     elements.loader.style.display = 'none';
     elements.submitButton.disabled = false;
 }
+
+// ===== MAP MODAL LOGIC =====
+let map = null;
+let marker = null;
+
+function openMapModal() {
+    const modal = document.getElementById('mapModal');
+    modal.style.display = 'block';
+
+    // Initialize map only once
+    if (!map) {
+        setTimeout(() => {
+            map = L.map('map').setView([7.0708, 125.6044], 12); // Davao, Philippines
+
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+                maxZoom: 19
+            }).addTo(map);
+
+            // Restore existing marker if lat/lng already set
+            const existingLat = document.getElementById('clinic_lat').value;
+            const existingLng = document.getElementById('clinic_lng').value;
+            if (existingLat && existingLng) {
+                const latlng = L.latLng(parseFloat(existingLat), parseFloat(existingLng));
+                marker = L.marker(latlng).addTo(map);
+                map.setView(latlng, 16);
+                document.getElementById('confirmLocationBtn').disabled = false;
+            } else {
+                document.getElementById('confirmLocationBtn').disabled = true;
+            }
+
+            // Click on map to place/move marker
+            map.on('click', function (e) {
+                if (marker) {
+                    marker.setLatLng(e.latlng);
+                } else {
+                    marker = L.marker(e.latlng).addTo(map);
+                }
+                document.getElementById('confirmLocationBtn').disabled = false;
+            });
+        }, 200);
+    } else {
+        setTimeout(() => {
+            map.invalidateSize();
+        }, 200);
+    }
+}
+
+function closeMapModal() {
+    const modal = document.getElementById('mapModal');
+    modal.style.display = 'none';
+}
+
+function confirmLocation() {
+    if (marker) {
+        const latlng = marker.getLatLng();
+        document.getElementById('clinic_lat').value = latlng.lat.toFixed(7);
+        document.getElementById('clinic_lng').value = latlng.lng.toFixed(7);
+    }
+    closeMapModal();
+}
+
+// Map modal event listeners
+document.addEventListener('DOMContentLoaded', () => {
+    const openMapBtn = document.getElementById('openMapBtn');
+    const closeMapModalBtn = document.getElementById('closeMapModal');
+    const confirmLocationBtn = document.getElementById('confirmLocationBtn');
+    const mapModal = document.getElementById('mapModal');
+
+    if (openMapBtn) {
+        openMapBtn.addEventListener('click', openMapModal);
+    }
+    if (closeMapModalBtn) {
+        closeMapModalBtn.addEventListener('click', closeMapModal);
+    }
+    if (confirmLocationBtn) {
+        confirmLocationBtn.addEventListener('click', confirmLocation);
+    }
+
+    // Close modal when clicking outside
+    if (mapModal) {
+        mapModal.addEventListener('click', function (e) {
+            if (e.target === mapModal) {
+                closeMapModal();
+            }
+        });
+    }
+});

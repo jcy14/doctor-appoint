@@ -45,7 +45,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         if (!$user) {
             // Finally check admin table
-            $stmt = $pdo->prepare("SELECT AdminID as id, AdminPassword as password FROM admin WHERE AdminEmail = ?");
+            $stmt = $pdo->prepare("SELECT AdminID as id, Adminpassword as password FROM admin WHERE AdminEmail = ?");
             $stmt->execute([$email]);
             $user = $stmt->fetch();
             $role = 'admin';
@@ -85,7 +85,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 header('Location: find_doctors.php');
                 break;
             case 'admin':
-                header('Location: ../html/admin.html');
+                header('Location: admin.php');
                 break;
             default:
                 redirectWithError('Invalid user role');

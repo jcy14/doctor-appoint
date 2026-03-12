@@ -83,6 +83,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 $experience = isset($_POST['experience']) ? filter_var($_POST['experience'], FILTER_VALIDATE_INT) : 0;
                 $fee = filter_var($_POST['fee'], FILTER_VALIDATE_FLOAT);
                 $address = filter_var($_POST['address'], FILTER_SANITIZE_FULL_SPECIAL_CHARS);
+                $clinicLat = !empty($_POST['clinic_lat']) ? filter_var($_POST['clinic_lat'], FILTER_VALIDATE_FLOAT) : null;
+                $clinicLng = !empty($_POST['clinic_lng']) ? filter_var($_POST['clinic_lng'], FILTER_VALIDATE_FLOAT) : null;
 
                 if ($fee === false || $fee < 0) {
                     $_SESSION['error'] = 'Invalid consultation fee';
@@ -127,15 +129,19 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                         ClinicName,
                         ClinicAddress,
                         ClinicPhone,
-                        DoctorID
-                    ) VALUES (?, ?, ?, ?)
+                        DoctorID,
+                        ClinicLatitude,
+                        ClinicLongitude
+                    ) VALUES (?, ?, ?, ?, ?, ?)
                 ");
 
                 $stmt->execute([
                     $name . "'s Clinic",
                     $address,
                     $phone,
-                    $userId
+                    $userId,
+                    $clinicLat,
+                    $clinicLng
                 ]);
 
             } else {
@@ -203,9 +209,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign Up | Medical Appointment System</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
 
     <link rel="stylesheet" href="../css/signup.css">
- 
 </head>
 <body>
     <div class="signup-container">
@@ -308,7 +314,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     
                     <div class="form-group">
                         <label for="address">Clinic's Address *</label>
-                        <input type="text" id="address" name="address" required>
+                        <div class="address-field-wrapper">
+                            <input type="text" id="address" name="address" required>
+                            <button type="button" class="map-btn" id="openMapBtn" title="Pin clinic location on map">
+                                <i class="fas fa-map-pin"></i>
+                            </button>
+                        </div>
+                        <input type="hidden" id="clinic_lat" name="clinic_lat">
+                        <input type="hidden" id="clinic_lng" name="clinic_lng">
                         <div class="error-message"></div>
                     </div>
 
@@ -341,7 +354,21 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <div class="loader-spinner"></div>
     </div>
     
+    <!-- Map Modal -->
+    <div id="mapModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Pin Your Clinic Location</h2>
+                <span class="close" id="closeMapModal">&times;</span>
+            </div>
+            <p class="modal-instruction">Click on the map to pin your clinic's exact location.</p>
+            <div id="map"></div>
+            <button type="button" class="confirm-location-btn" id="confirmLocationBtn">Confirm Location</button>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
     <script src="../js/signup.js"></script>
 
 </body>
-</html> 
+</html>

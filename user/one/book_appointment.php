@@ -67,7 +67,7 @@ try {
             // Combine date and time
             $appointmentDateTime = date('Y-m-d H:i:s', strtotime("$appointmentDate $appointmentTime"));
             
-            // Log the combined datetime
+            // Log the datetime
             error_log("Combined DateTime: $appointmentDateTime");
 
             // Check if the selected time is available
@@ -98,7 +98,8 @@ try {
             ");
             
             // Log the values being inserted
-            error_log("Inserting - PatientID: {$_SESSION['user_id']}, DoctorID: $doctorId, DateTime: $appointmentDateTime, Reason: $reason");
+            error_log("Inserting - PatientID: {$_SESSION['user_id']}, DoctorID: $doctorId, 
+            DateTime: $appointmentDateTime, Reason: $reason");
 
             $result = $stmt->execute([
                 $_SESSION['user_id'],
@@ -110,6 +111,8 @@ try {
             if (!$result) {
                 throw new Exception('Failed to insert appointment');
             }
+
+
 
             // Commit transaction
             $pdo->commit();
@@ -137,6 +140,9 @@ try {
         }
     }
 
+
+
+
     // Get patient data for header
     $stmt = $pdo->prepare("
         SELECT 
@@ -156,6 +162,9 @@ try {
     header('Location: find_doctors.php');
     exit();
 }
+
+
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -292,7 +301,7 @@ try {
     <script>
         const DOCTOR_ID = <?php echo $doctorId; ?>;
 
-        // Dropdown functionality (hover for desktop, click for mobile)
+        // Dropdown functionality (hover for desktop)
         document.addEventListener('DOMContentLoaded', function() {
             const dropdownHeader = document.querySelector('.profile-header');
             const dropdownContent = document.querySelector('.dropdown-content');

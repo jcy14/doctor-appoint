@@ -12,6 +12,7 @@ $currentPage = basename($_SERVER['PHP_SELF']);
 // Define page access rules
 $pageRules = [
     'admin.html' => ['admin'],
+    'admin.php' => ['admin'],
     'doctor_home.html' => ['doctor'],
     'doctor_appointment.html' => ['doctor'],
     'doctor_medical.html' => ['doctor'],
