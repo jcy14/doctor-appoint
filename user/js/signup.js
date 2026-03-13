@@ -332,6 +332,10 @@ function hideInputError(input) {
 function showError(message) {
     hideLoader();
     signupState.isLoading = false;
+    if (typeof Swal === 'undefined') {
+        alert(message);
+        return;
+    }
     Swal.fire({
         icon: 'error',
         title: 'Error',
@@ -342,6 +346,12 @@ function showError(message) {
 function showSuccess(message) {
     hideLoader();
     signupState.isLoading = false;
+    if (typeof Swal === 'undefined') {
+        alert(message);
+        clearFormData();
+        window.location.href = 'index.php';
+        return;
+    }
     Swal.fire({
         icon: 'success',
         title: 'Success',
@@ -416,13 +426,57 @@ function closeMapModal() {
     modal.style.display = 'none';
 }
 
-function confirmLocation() {
-    if (marker) {
-        const latlng = marker.getLatLng();
-        document.getElementById('clinic_lat').value = latlng.lat.toFixed(7);
-        document.getElementById('clinic_lng').value = latlng.lng.toFixed(7);
+async function reverseGeocode(lat, lng) {
+    const url = `https://nominatim.openstreetmap.org/reverse?format=jsonv2&lat=${encodeURIComponent(lat)}&lon=${encodeURIComponent(lng)}&zoom=18&addressdetails=1`;
+    const response = await fetch(url, {
+        headers: {
+            'Accept': 'application/json'
+        }
+    });
+
+    if (!response.ok) {
+        throw new Error('Unable to resolve selected location');
     }
-    closeMapModal();
+
+    const result = await response.json();
+    return result.display_name || '';
+}
+
+async function confirmLocation() {
+    if (!marker) {
+        closeMapModal();
+        return;
+    }
+
+    const confirmBtn = document.getElementById('confirmLocationBtn');
+    const addressInput = document.getElementById('address');
+    const latlng = marker.getLatLng();
+
+    document.getElementById('clinic_lat').value = latlng.lat.toFixed(7);
+    document.getElementById('clinic_lng').value = latlng.lng.toFixed(7);
+
+    if (confirmBtn) {
+        confirmBtn.disabled = true;
+        confirmBtn.textContent = 'Resolving address...';
+    }
+
+    try {
+        const readableAddress = await reverseGeocode(latlng.lat, latlng.lng);
+        if (readableAddress) {
+            addressInput.value = readableAddress;
+            hideInputError(addressInput);
+        } else {
+            addressInput.value = 'Pinned clinic location selected';
+        }
+        closeMapModal();
+    } catch (error) {
+        showError('Location pinned, but address lookup failed. Please enter clinic address manually.');
+    } finally {
+        if (confirmBtn) {
+            confirmBtn.disabled = false;
+            confirmBtn.textContent = 'Confirm Location';
+        }
+    }
 }
 
 // Map modal event listeners

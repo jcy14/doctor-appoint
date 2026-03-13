@@ -4118,3 +4118,114 @@ Stack trace:
 [12-Mar-2026 13:05:00 Asia/Manila] Redis extension is not loaded
 [12-Mar-2026 13:05:26 Asia/Manila] Redis extension is not loaded
 [12-Mar-2026 13:05:41 Asia/Manila] Redis extension is not loaded
+[13-Mar-2026 11:41:26 Asia/Manila] Redis initialization error: Connection refused
+[13-Mar-2026 11:41:32 Asia/Manila] Redis initialization error: Connection refused
+[13-Mar-2026 11:41:34 Asia/Manila] Redis initialization error: Connection refused
+[13-Mar-2026 11:41:34 Asia/Manila] Redis initialization error: Connection refused
+[13-Mar-2026 11:44:07 Asia/Manila] Logout error: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'akasi.login_logs' doesn't exist
+[13-Mar-2026 11:44:16 Asia/Manila] Login error: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'akasi.doctor' doesn't exist
+[13-Mar-2026 11:44:47 Asia/Manila] Redis initialization error: Connection refused
+[13-Mar-2026 11:44:50 Asia/Manila] Redis initialization error: Connection refused
+[13-Mar-2026 11:45:28 Asia/Manila] Redis initialization error: Connection refused
+[13-Mar-2026 11:45:29 Asia/Manila] Redis initialization error: Connection refused
+[13-Mar-2026 11:50:18 Asia/Manila] Logout error: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'akasi.login_logs' doesn't exist
+[13-Mar-2026 11:50:24 Asia/Manila] Redis initialization error: Connection refused
+[13-Mar-2026 11:50:26 Asia/Manila] Redis initialization error: Connection refused
+[13-Mar-2026 11:50:27 Asia/Manila] Redis initialization error: Connection refused
+[13-Mar-2026 11:50:28 Asia/Manila] Redis initialization error: Connection refused
+[13-Mar-2026 11:51:14 Asia/Manila] Logout error: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'akasi.login_logs' doesn't exist
+[13-Mar-2026 11:52:42 Asia/Manila] Signup error: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'ClinicLatitude' in 'field list'
+[13-Mar-2026 11:56:57 Asia/Manila] Redis initialization error: Connection refused
+[13-Mar-2026 11:57:15 Asia/Manila] Redis initialization error: Connection refused
+[13-Mar-2026 11:57:25 Asia/Manila] Redis initialization error: Connection refused
+[13-Mar-2026 11:57:35 Asia/Manila] Redis initialization error: Connection refused
+[13-Mar-2026 11:57:39 Asia/Manila] Logout error: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'akasi.login_logs' doesn't exist
+[13-Mar-2026 11:57:41 Asia/Manila] Redis initialization error: Connection refused
+[13-Mar-2026 11:57:45 Asia/Manila] Redis initialization error: Connection refused
+[13-Mar-2026 11:58:01 Asia/Manila] Redis initialization error: Connection refused
+[13-Mar-2026 11:58:11 Asia/Manila] Redis initialization error: Connection refused
+[13-Mar-2026 11:58:13 Asia/Manila] Redis initialization error: Connection refused
+[13-Mar-2026 11:58:13 Asia/Manila] Redis initialization error: Connection refused
+[13-Mar-2026 11:58:13 Asia/Manila] Redis initialization error: Connection refused
+[13-Mar-2026 11:58:13 Asia/Manila] Redis initialization error: Connection refused
+[13-Mar-2026 11:58:13 Asia/Manila] Redis initialization error: Connection refused
+[13-Mar-2026 11:58:32 Asia/Manila] Redis initialization error: Connection refused
+[13-Mar-2026 11:59:06 Asia/Manila] Redis initialization error: Connection refused
+[13-Mar-2026 11:59:15 Asia/Manila] Redis initialization error: Connection refused
+[13-Mar-2026 11:59:54 Asia/Manila] Redis initialization error: Connection refused
+[13-Mar-2026 12:00:08 Asia/Manila] Logout error: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'akasi.login_logs' doesn't exist
+[13-Mar-2026 12:00:16 Asia/Manila] Signup error: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '1203-12323' for key 'doctor.LicenseNumber'
+[13-Mar-2026 12:00:23 Asia/Manila] Signup error: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '1203-12323' for key 'doctor.LicenseNumber'
+[13-Mar-2026 12:00:43 Asia/Manila] Signup error: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '1203-12323' for key 'doctor.LicenseNumber'
+[13-Mar-2026 12:00:57 Asia/Manila] Signup error: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '1203-12323' for key 'doctor.LicenseNumber'
+[13-Mar-2026 12:01:21 Asia/Manila] Signup error: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '1203-12323' for key 'doctor.LicenseNumber'
+[13-Mar-2026 12:02:36 Asia/Manila] Signup error: Email already registered
+[13-Mar-2026 12:04:24 Asia/Manila] Signup error: Email already registered
+[13-Mar-2026 12:07:35 Asia/Manila] Signup error: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '123321332' for key 'doctor.LicenseNumber'
+[13-Mar-2026 12:08:14 Asia/Manila] Signup error: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '123321332' for key 'doctor.LicenseNumber'
+[13-Mar-2026 12:09:00 Asia/Manila] Signup error: License number already exists. Please use a different one.
+[13-Mar-2026 12:11:45 Asia/Manila] Redis initialization error: Connection refused
+[13-Mar-2026 12:11:45 Asia/Manila] Rate limiting disabled - Redis not available
+[13-Mar-2026 12:11:55 Asia/Manila] Logout error: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'akasi.login_logs' doesn't exist
+[13-Mar-2026 12:11:58 Asia/Manila] Redis initialization error: Connection refused
+[13-Mar-2026 12:12:00 Asia/Manila] Redis initialization error: Connection refused
+[13-Mar-2026 12:12:03 Asia/Manila] Redis initialization error: Connection refused
+[13-Mar-2026 12:12:08 Asia/Manila] Redis initialization error: Connection refused
+[13-Mar-2026 12:12:08 Asia/Manila] Redis initialization error: Connection refused
+[13-Mar-2026 12:12:14 Asia/Manila] Redis initialization error: Connection refused
+[13-Mar-2026 12:13:19 Asia/Manila] Redis initialization error: Connection refused
+[13-Mar-2026 12:13:20 Asia/Manila] Redis initialization error: Connection refused
+[13-Mar-2026 12:13:20 Asia/Manila] Redis initialization error: Connection refused
+[13-Mar-2026 12:14:53 Asia/Manila] Logout error: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'akasi.login_logs' doesn't exist
+[13-Mar-2026 12:15:10 Asia/Manila] Redis initialization error: Connection refused
+[13-Mar-2026 12:15:16 Asia/Manila] Redis initialization error: Connection refused
+[13-Mar-2026 12:15:18 Asia/Manila] Redis initialization error: Connection refused
+[13-Mar-2026 12:15:19 Asia/Manila] Redis initialization error: Connection refused
+[13-Mar-2026 12:15:41 Asia/Manila] Logout error: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'akasi.login_logs' doesn't exist
+[13-Mar-2026 12:16:32 Asia/Manila] Redis initialization error: Connection refused
+[13-Mar-2026 12:16:32 Asia/Manila] Rate limiting disabled - Redis not available
+[13-Mar-2026 12:17:03 Asia/Manila] Appointment Data - Date: 2026-03-14, Time: 10:00, Reason: asadaa
+[13-Mar-2026 12:17:03 Asia/Manila] Combined DateTime: 2026-03-14 10:00:00
+[13-Mar-2026 12:17:03 Asia/Manila] Inserting - PatientID: 7, DoctorID: 4, 
+            DateTime: 2026-03-14 10:00:00, Reason: asadaa
+[13-Mar-2026 12:17:24 Asia/Manila] Redis initialization error: Connection refused
+[13-Mar-2026 12:17:24 Asia/Manila] Rate limiting disabled - Redis not available
+[13-Mar-2026 12:17:25 Asia/Manila] Logout error: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'akasi.login_logs' doesn't exist
+[13-Mar-2026 12:17:29 Asia/Manila] Redis initialization error: Connection refused
+[13-Mar-2026 12:17:31 Asia/Manila] Redis initialization error: Connection refused
+[13-Mar-2026 12:17:31 Asia/Manila] Redis initialization error: Connection refused
+[13-Mar-2026 12:17:33 Asia/Manila] Redis initialization error: Connection refused
+[13-Mar-2026 12:17:40 Asia/Manila] Logout error: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'akasi.login_logs' doesn't exist
+[13-Mar-2026 12:17:44 Asia/Manila] Redis initialization error: Connection refused
+[13-Mar-2026 12:17:44 Asia/Manila] Rate limiting disabled - Redis not available
+[13-Mar-2026 12:17:51 Asia/Manila] Redis initialization error: Connection refused
+[13-Mar-2026 12:17:51 Asia/Manila] Rate limiting disabled - Redis not available
+[13-Mar-2026 12:18:43 Asia/Manila] Redis initialization error: Connection refused
+[13-Mar-2026 12:18:43 Asia/Manila] Rate limiting disabled - Redis not available
+[13-Mar-2026 12:18:54 Asia/Manila] Appointment Data - Date: 2026-03-14, Time: 10:00, Reason: wdadad
+[13-Mar-2026 12:18:54 Asia/Manila] Combined DateTime: 2026-03-14 10:00:00
+[13-Mar-2026 12:18:54 Asia/Manila] Inserting - PatientID: 7, DoctorID: 12, 
+            DateTime: 2026-03-14 10:00:00, Reason: wdadad
+[13-Mar-2026 12:18:56 Asia/Manila] Logout error: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'akasi.login_logs' doesn't exist
+[13-Mar-2026 12:19:22 Asia/Manila] Redis initialization error: Connection refused
+[13-Mar-2026 12:19:24 Asia/Manila] Redis initialization error: Connection refused
+[13-Mar-2026 12:19:24 Asia/Manila] Redis initialization error: Connection refused
+[13-Mar-2026 12:19:31 Asia/Manila] Redis initialization error: Connection refused
+[13-Mar-2026 12:19:32 Asia/Manila] Redis initialization error: Connection refused
+[13-Mar-2026 12:19:32 Asia/Manila] Redis initialization error: Connection refused
+[13-Mar-2026 12:19:37 Asia/Manila] Redis initialization error: Connection refused
+[13-Mar-2026 12:19:38 Asia/Manila] Redis initialization error: Connection refused
+[13-Mar-2026 12:19:38 Asia/Manila] Redis initialization error: Connection refused
+[13-Mar-2026 12:19:38 Asia/Manila] Redis initialization error: Connection refused
+[13-Mar-2026 12:19:40 Asia/Manila] Redis initialization error: Connection refused
+[13-Mar-2026 12:19:47 Asia/Manila] Redis initialization error: Connection refused
+[13-Mar-2026 12:19:49 Asia/Manila] Redis initialization error: Connection refused
+[13-Mar-2026 12:19:52 Asia/Manila] Redis initialization error: Connection refused
+[13-Mar-2026 12:19:52 Asia/Manila] Redis initialization error: Connection refused
+[13-Mar-2026 12:19:57 Asia/Manila] Logout error: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'akasi.login_logs' doesn't exist
+[13-Mar-2026 12:25:44 Asia/Manila] Redis initialization error: Connection refused
+[13-Mar-2026 12:25:52 Asia/Manila] Redis initialization error: Connection refused
+[13-Mar-2026 12:25:52 Asia/Manila] Redis initialization error: Connection refused
+[13-Mar-2026 12:25:53 Asia/Manila] Redis initialization error: Connection refused
+[13-Mar-2026 12:31:39 Asia/Manila] Redis initialization error: Connection refused
+[13-Mar-2026 12:31:52 Asia/Manila] Logout error: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'akasi.login_logs' doesn't exist

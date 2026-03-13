@@ -32,6 +32,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $role = filter_var($_POST['role'], FILTER_SANITIZE_FULL_SPECIAL_CHARS);
         $gender = isset($_POST['gender']) ? filter_var($_POST['gender'], FILTER_SANITIZE_FULL_SPECIAL_CHARS) : null;
         $birthday = !empty($_POST['birthday']) ? date('Y-m-d', strtotime($_POST['birthday'])) : null;
+        $confirmPassword = $_POST['confirmPassword'] ?? '';
+
+        if (!in_array($role, ['doctor', 'patient'], true)) {
+            $_SESSION['error'] = 'Invalid account role selected';
+            header('Location: signup.php');
+            exit;
+        }
 
         // Validate email format
         if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
@@ -40,9 +47,27 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             exit;
         }
 
+        if (!empty($_POST['birthday']) && !validateDate($_POST['birthday'], 'Y-m-d')) {
+            $_SESSION['error'] = 'Invalid birthday format';
+            header('Location: signup.php');
+            exit;
+        }
+
         // Validate password strength
         if (strlen($_POST['password']) < 8) {
             $_SESSION['error'] = 'Password must be at least 8 characters long';
+            header('Location: signup.php');
+            exit;
+        }
+
+        if ($_POST['password'] !== $confirmPassword) {
+            $_SESSION['error'] = 'Passwords do not match';
+            header('Location: signup.php');
+            exit;
+        }
+
+        if (empty($_POST['terms'])) {
+            $_SESSION['error'] = 'You must agree to the Terms of Service and Privacy Policy';
             header('Location: signup.php');
             exit;
         }
@@ -60,9 +85,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $stmt->execute([$email, $email]);
             
             if ($stmt->fetch()) {
-                $_SESSION['error'] = 'Email already registered';
-                header('Location: signup.php');
-                exit;
+                throw new Exception('Email already registered');
             }
 
             // Hash password
@@ -70,10 +93,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
             if ($role === 'doctor') {
                 // Validate doctor-specific fields
-                if (empty($_POST['license']) || empty($_POST['specialization']) || !isset($_POST['fee'])) {
-                    $_SESSION['error'] = 'License number, specialization, and consultation fee are required for doctors';
-                    header('Location: signup.php');
-                    exit;
+                if (empty($_POST['license']) || empty($_POST['specialization']) || !isset($_POST['fee']) || empty($_POST['address'])) {
+                    throw new Exception('License number, specialization, clinic address, and consultation fee are required for doctors');
                 }
 
                 // Validate and sanitize doctor-specific fields
@@ -83,13 +104,16 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 $experience = isset($_POST['experience']) ? filter_var($_POST['experience'], FILTER_VALIDATE_INT) : 0;
                 $fee = filter_var($_POST['fee'], FILTER_VALIDATE_FLOAT);
                 $address = filter_var($_POST['address'], FILTER_SANITIZE_FULL_SPECIAL_CHARS);
-                $clinicLat = !empty($_POST['clinic_lat']) ? filter_var($_POST['clinic_lat'], FILTER_VALIDATE_FLOAT) : null;
-                $clinicLng = !empty($_POST['clinic_lng']) ? filter_var($_POST['clinic_lng'], FILTER_VALIDATE_FLOAT) : null;
 
                 if ($fee === false || $fee < 0) {
-                    $_SESSION['error'] = 'Invalid consultation fee';
-                    header('Location: signup.php');
-                    exit;
+                    throw new Exception('Invalid consultation fee');
+                }
+
+                // Prevent duplicate license number before insert.
+                $stmt = $pdo->prepare("SELECT DoctorID FROM doctor WHERE LicenseNumber = ? LIMIT 1");
+                $stmt->execute([$license]);
+                if ($stmt->fetch()) {
+                    throw new Exception('License number already exists. Please use a different one.');
                 }
 
                 // Insert doctor record
@@ -129,19 +153,15 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                         ClinicName,
                         ClinicAddress,
                         ClinicPhone,
-                        DoctorID,
-                        ClinicLatitude,
-                        ClinicLongitude
-                    ) VALUES (?, ?, ?, ?, ?, ?)
+                        DoctorID
+                    ) VALUES (?, ?, ?, ?)
                 ");
 
                 $stmt->execute([
                     $name . "'s Clinic",
                     $address,
                     $phone,
-                    $userId,
-                    $clinicLat,
-                    $clinicLng
+                    $userId
                 ]);
 
             } else {
@@ -184,11 +204,16 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             // Commit transaction
             $pdo->commit();
 
-            // Set success message and redirect
-            $_SESSION['success'] = 'Registration successful! Please login.';
-            header('Location: index.php');
+            // Redirect with success message for frontend alert handling
+            header('Location: index.php?success=' . urlencode('Account successfully created. Please log in.'));
             exit;
 
+        } catch (PDOException $e) {
+            $pdo->rollBack();
+            if ((int)$e->getCode() === 23000) {
+                throw new Exception('Duplicate value found. Please check your email or license number.');
+            }
+            throw $e;
         } catch (Exception $e) {
             $pdo->rollBack();
             throw $e;
@@ -196,8 +221,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     } catch (Exception $e) {
         error_log("Signup error: " . $e->getMessage());
-        $_SESSION['error'] = 'An error occurred during registration. Please try again.';
-        header('Location: signup.php');
+        $_SESSION['error'] = $e->getMessage();
+        header('Location: signup.php?error=' . urlencode($e->getMessage()));
         exit;
     }
 }
@@ -367,6 +392,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         </div>
     </div>
 
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
     <script src="../js/signup.js"></script>
 

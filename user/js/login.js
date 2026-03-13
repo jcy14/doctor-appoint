@@ -65,6 +65,8 @@ function checkForMessages() {
     if (error) {
         showError(decodeURIComponent(error));
     } else if (success) {
+        // Signup success lands on login page, so clear saved signup draft data.
+        localStorage.removeItem('signup_form_data');
         showSuccess(decodeURIComponent(success));
     }
 }

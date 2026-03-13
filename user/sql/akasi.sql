@@ -47,7 +47,11 @@ INSERT INTO `admin` (`AdminID`, `AdminEmail`, `Adminpassword`, `PatientID`, `Doc
 (1, 'superadmin@akasi.example.com', '$2y$10$adminhash1234567890abcdefghij', NULL, NULL, NULL, NULL, NULL, NULL),
 (2, 'patientadmin@akasi.example.com', '$2y$10$adminhash2345678901bcdefghijk', 1, NULL, NULL, 1, NULL, NULL),
 (3, 'doctoradmin@akasi.example.com', '$2y$10$adminhash3456789012cdefghijkl', NULL, 1, NULL, NULL, 1, NULL),
-(4, 'recordsadmin@akasi.example.com', '$2y$10$adminhash4567890123defghijklm', NULL, NULL, 1, NULL, NULL, 1);
+(4, 'recordsadmin@akasi.example.com', '$2y$10$adminhash4567890123defghijklm', NULL, NULL, 1, NULL, NULL, 1),
+(5, 'superadmintest@akasi.example.com', '$2y$12$zmssDEhQwMCrTR5lPtQ.x.bPqC/uDRtTMVIFQuna8gGdcMt6R7lLm', NULL, NULL, NULL, NULL, NULL, NULL),
+(6, 'patientadmintest@akasi.example.com', '$2y$12$.jPu5CSHMpzC7G0R/.KtTe5pf6oKZaFCYx..JUhoWKLzYvjS17nIC', NULL, NULL, NULL, NULL, NULL, NULL),
+(7, 'doctoradmintest@akasi.example.com', '$2y$12$X5O6VKUqJ11JWwABITWX0.tPAxY4t5hjBUMMu9u533YD0P5wXNyZG', NULL, NULL, NULL, NULL, NULL, NULL),
+(8, 'recordsadmintest@akasi.example.com', '$2y$12$atFU/HHEMB6JLkmxmTeNU.9IDjJlO2vbWqPWfliavU1raXLKo7due', NULL, NULL, NULL, NULL, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -281,7 +285,7 @@ ALTER TABLE `patientdetail`
 -- AUTO_INCREMENT for table `admin`
 --
 ALTER TABLE `admin`
-  MODIFY `AdminID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `AdminID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `appointment`
