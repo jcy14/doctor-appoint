@@ -4229,3 +4229,40 @@ Stack trace:
 [13-Mar-2026 12:25:53 Asia/Manila] Redis initialization error: Connection refused
 [13-Mar-2026 12:31:39 Asia/Manila] Redis initialization error: Connection refused
 [13-Mar-2026 12:31:52 Asia/Manila] Logout error: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'akasi.login_logs' doesn't exist
+[13-Mar-2026 12:56:15 Asia/Manila] Redis initialization error: No connection could be made because the target machine actively refused it
+[13-Mar-2026 12:56:22 Asia/Manila] Redis initialization error: No connection could be made because the target machine actively refused it
+[13-Mar-2026 12:56:25 Asia/Manila] Redis initialization error: No connection could be made because the target machine actively refused it
+[13-Mar-2026 12:56:27 Asia/Manila] Redis initialization error: No connection could be made because the target machine actively refused it
+[13-Mar-2026 12:56:29 Asia/Manila] Redis initialization error: No connection could be made because the target machine actively refused it
+[13-Mar-2026 12:56:37 Asia/Manila] Redis initialization error: No connection could be made because the target machine actively refused it
+[13-Mar-2026 12:56:40 Asia/Manila] Redis initialization error: No connection could be made because the target machine actively refused it
+[13-Mar-2026 12:56:42 Asia/Manila] Redis initialization error: No connection could be made because the target machine actively refused it
+[13-Mar-2026 12:56:44 Asia/Manila] Redis initialization error: No connection could be made because the target machine actively refused it
+[13-Mar-2026 12:56:46 Asia/Manila] Redis initialization error: No connection could be made because the target machine actively refused it
+[13-Mar-2026 12:56:49 Asia/Manila] Redis initialization error: No connection could be made because the target machine actively refused it
+[13-Mar-2026 12:56:51 Asia/Manila] Redis initialization error: No connection could be made because the target machine actively refused it
+[13-Mar-2026 12:56:53 Asia/Manila] Redis initialization error: No connection could be made because the target machine actively refused it
+[13-Mar-2026 14:56:05 Asia/Manila] Redis initialization error: No connection could be made because the target machine actively refused it
+[14-Mar-2026 08:06:36 Asia/Manila] Redis initialization error: No connection could be made because the target machine actively refused it
+[14-Mar-2026 08:06:44 Asia/Manila] Redis initialization error: No connection could be made because the target machine actively refused it
+[14-Mar-2026 08:15:30 Asia/Manila] Signup error: SQLSTATE[42000]: Syntax error or access violation: 1305 PROCEDURE akasi.CheckEmailExists does not exist
+[14-Mar-2026 08:15:37 Asia/Manila] Signup error: SQLSTATE[42000]: Syntax error or access violation: 1305 PROCEDURE akasi.CheckEmailExists does not exist
+[14-Mar-2026 08:17:36 Asia/Manila] Signup error: SQLSTATE[42000]: Syntax error or access violation: 1305 PROCEDURE akasi.CheckEmailExists does not exist
+[14-Mar-2026 08:19:27 Asia/Manila] Signup error: SQLSTATE[42000]: Syntax error or access violation: 1305 PROCEDURE akasi.CheckEmailExists does not exist
+[14-Mar-2026 08:20:37 Asia/Manila] Signup error: SQLSTATE[42000]: Syntax error or access violation: 1305 PROCEDURE akasi.CheckEmailExists does not exist
+[14-Mar-2026 08:23:12 Asia/Manila] Signup error: SQLSTATE[42000]: Syntax error or access violation: 1305 PROCEDURE akasi.CheckEmailExists does not exist
+[14-Mar-2026 08:24:00 Asia/Manila] Signup error: Database error occurred during doctor registration
+[14-Mar-2026 08:26:55 Asia/Manila] Signup error: License number already exists. Please use a different one.
+[14-Mar-2026 08:27:15 Asia/Manila] Redis initialization error: No connection could be made because the target machine actively refused it
+[14-Mar-2026 08:27:22 Asia/Manila] Logout error: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'akasi.login_logs' doesn't exist
+[14-Mar-2026 08:30:00 Asia/Manila] Redis initialization error: No connection could be made because the target machine actively refused it
+[14-Mar-2026 08:30:09 Asia/Manila] Logout error: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'akasi.login_logs' doesn't exist
+[14-Mar-2026 08:30:20 Asia/Manila] Redis initialization error: No connection could be made because the target machine actively refused it
+[14-Mar-2026 08:30:26 Asia/Manila] Redis initialization error: No connection could be made because the target machine actively refused it
+[14-Mar-2026 08:30:32 Asia/Manila] Redis initialization error: No connection could be made because the target machine actively refused it
+[14-Mar-2026 08:31:52 Asia/Manila] Logout error: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'akasi.login_logs' doesn't exist
+[14-Mar-2026 08:32:02 Asia/Manila] Redis initialization error: No connection could be made because the target machine actively refused it
+[14-Mar-2026 08:32:06 Asia/Manila] Redis initialization error: No connection could be made because the target machine actively refused it
+[14-Mar-2026 08:32:08 Asia/Manila] Redis initialization error: No connection could be made because the target machine actively refused it
+[14-Mar-2026 08:32:10 Asia/Manila] Redis initialization error: No connection could be made because the target machine actively refused it
+[14-Mar-2026 08:32:14 Asia/Manila] Logout error: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'akasi.login_logs' doesn't exist
