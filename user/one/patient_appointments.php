@@ -38,31 +38,31 @@ try {
     if (!$patient) {
         throw new Exception('Patient data not found');
     }
-    
-    // Get all appointments
-    $stmt = $pdo->prepare("
-        SELECT 
-            a.AppointmentID,
-            a.AppointmentTime,
-            a.Status,
-            d.DoctorName,
-            d.DoctorEmail,
-            d.DoctorPhone,
-            d.Specialization,
-            c.ClinicName,
-            c.ClinicAddress,
-            c.ClinicPhone
-        FROM appointment a
-        JOIN doctor d ON a.DoctorID = d.DoctorID
-        LEFT JOIN clinic c ON d.DoctorID = c.DoctorID
-        WHERE a.PatientID = :patientId 
-        ORDER BY 
-            CASE 
-                WHEN a.AppointmentTime > NOW() THEN 0
-                ELSE 1
-            END,
-            a.AppointmentTime ASC
-    ");
+ 
+    // Get all appointments - with DISTINCT
+$stmt = $pdo->prepare("
+    SELECT DISTINCT
+        a.AppointmentID,
+        a.AppointmentTime,
+        a.Status,
+        d.DoctorName,
+        d.DoctorEmail,
+        d.DoctorPhone,
+        d.Specialization,
+        c.ClinicName,
+        c.ClinicAddress,
+        c.ClinicPhone
+    FROM appointment a
+    JOIN doctor d ON a.DoctorID = d.DoctorID
+    LEFT JOIN clinic c ON d.DoctorID = c.DoctorID
+    WHERE a.PatientID = :patientId 
+    ORDER BY 
+        CASE 
+            WHEN a.AppointmentTime > NOW() THEN 0
+            ELSE 1
+        END,
+        a.AppointmentTime ASC
+");
     
     $stmt->execute([':patientId' => $_SESSION['user_id']]);
     $appointments = $stmt->fetchAll(PDO::FETCH_ASSOC);

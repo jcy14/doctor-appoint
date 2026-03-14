@@ -4266,3 +4266,116 @@ Stack trace:
 [14-Mar-2026 08:32:08 Asia/Manila] Redis initialization error: No connection could be made because the target machine actively refused it
 [14-Mar-2026 08:32:10 Asia/Manila] Redis initialization error: No connection could be made because the target machine actively refused it
 [14-Mar-2026 08:32:14 Asia/Manila] Logout error: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'akasi.login_logs' doesn't exist
+[14-Mar-2026 14:51:18 Asia/Manila] Redis initialization error: No connection could be made because the target machine actively refused it
+[14-Mar-2026 14:51:46 Asia/Manila] Redis initialization error: No connection could be made because the target machine actively refused it
+[14-Mar-2026 14:51:48 Asia/Manila] Redis initialization error: No connection could be made because the target machine actively refused it
+[14-Mar-2026 14:51:50 Asia/Manila] Redis initialization error: No connection could be made because the target machine actively refused it
+[14-Mar-2026 14:51:57 Asia/Manila] Logout error: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'akasi.login_logs' doesn't exist
+[14-Mar-2026 17:51:35 Asia/Manila] Redis initialization error: No connection could be made because the target machine actively refused it
+[14-Mar-2026 17:51:41 Asia/Manila] Redis initialization error: No connection could be made because the target machine actively refused it
+[14-Mar-2026 17:52:01 Asia/Manila] Redis initialization error: No connection could be made because the target machine actively refused it
+[14-Mar-2026 17:52:09 Asia/Manila] Redis initialization error: No connection could be made because the target machine actively refused it
+[14-Mar-2026 17:52:11 Asia/Manila] Redis initialization error: No connection could be made because the target machine actively refused it
+[14-Mar-2026 17:52:13 Asia/Manila] Redis initialization error: No connection could be made because the target machine actively refused it
+[14-Mar-2026 17:52:15 Asia/Manila] Redis initialization error: No connection could be made because the target machine actively refused it
+[14-Mar-2026 17:52:23 Asia/Manila] Redis initialization error: No connection could be made because the target machine actively refused it
+[14-Mar-2026 17:52:28 Asia/Manila] Logout error: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'akasi.login_logs' doesn't exist
+[14-Mar-2026 17:52:35 Asia/Manila] Redis initialization error: No connection could be made because the target machine actively refused it
+[14-Mar-2026 17:52:35 Asia/Manila] Rate limiting disabled - Redis not available
+[14-Mar-2026 17:52:39 Asia/Manila] 8192
+[14-Mar-2026 17:52:39 Asia/Manila] PHP Warning:  http_response_code(): Cannot set response code - headers already sent (output started at C:\Users\sb417\Downloads\v2\doctor-appoint\user\one\book_appointment.php:169) in C:\Users\sb417\Downloads\v2\doctor-appoint\user\php\functions.php on line 278
+[14-Mar-2026 17:53:03 Asia/Manila] Redis initialization error: No connection could be made because the target machine actively refused it
+[14-Mar-2026 17:53:03 Asia/Manila] Rate limiting disabled - Redis not available
+[14-Mar-2026 17:53:06 Asia/Manila] 8192
+[14-Mar-2026 17:53:06 Asia/Manila] PHP Warning:  http_response_code(): Cannot set response code - headers already sent (output started at C:\Users\sb417\Downloads\v2\doctor-appoint\user\one\book_appointment.php:169) in C:\Users\sb417\Downloads\v2\doctor-appoint\user\php\functions.php on line 278
+[14-Mar-2026 17:53:51 Asia/Manila] 8192
+[14-Mar-2026 17:53:51 Asia/Manila] PHP Warning:  http_response_code(): Cannot set response code - headers already sent (output started at C:\Users\sb417\Downloads\v2\doctor-appoint\user\one\book_appointment.php:169) in C:\Users\sb417\Downloads\v2\doctor-appoint\user\php\functions.php on line 278
+[14-Mar-2026 17:54:10 Asia/Manila] Redis initialization error: No connection could be made because the target machine actively refused it
+[14-Mar-2026 17:54:10 Asia/Manila] Rate limiting disabled - Redis not available
+[14-Mar-2026 17:54:23 Asia/Manila] Redis initialization error: No connection could be made because the target machine actively refused it
+[14-Mar-2026 17:54:23 Asia/Manila] Rate limiting disabled - Redis not available
+[14-Mar-2026 17:54:25 Asia/Manila] 8192
+[14-Mar-2026 17:54:25 Asia/Manila] PHP Warning:  http_response_code(): Cannot set response code - headers already sent (output started at C:\Users\sb417\Downloads\v2\doctor-appoint\user\one\book_appointment.php:169) in C:\Users\sb417\Downloads\v2\doctor-appoint\user\php\functions.php on line 278
+[14-Mar-2026 17:55:27 Asia/Manila] Redis initialization error: No connection could be made because the target machine actively refused it
+[14-Mar-2026 17:55:27 Asia/Manila] Rate limiting disabled - Redis not available
+[14-Mar-2026 17:55:32 Asia/Manila] Redis initialization error: No connection could be made because the target machine actively refused it
+[14-Mar-2026 17:55:32 Asia/Manila] Rate limiting disabled - Redis not available
+[14-Mar-2026 17:55:41 Asia/Manila] Logout error: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'akasi.login_logs' doesn't exist
+[14-Mar-2026 17:55:53 Asia/Manila] Redis initialization error: No connection could be made because the target machine actively refused it
+[14-Mar-2026 17:55:55 Asia/Manila] Redis initialization error: No connection could be made because the target machine actively refused it
+[14-Mar-2026 17:55:55 Asia/Manila] Rate limiting disabled - Redis not available
+[14-Mar-2026 17:56:05 Asia/Manila] Redis initialization error: No connection could be made because the target machine actively refused it
+[14-Mar-2026 17:56:05 Asia/Manila] Rate limiting disabled - Redis not available
+[14-Mar-2026 17:56:21 Asia/Manila] Redis initialization error: No connection could be made because the target machine actively refused it
+[14-Mar-2026 17:56:21 Asia/Manila] Rate limiting disabled - Redis not available
+[14-Mar-2026 17:56:23 Asia/Manila] 8192
+[14-Mar-2026 17:56:23 Asia/Manila] PHP Warning:  http_response_code(): Cannot set response code - headers already sent (output started at C:\Users\sb417\Downloads\v2\doctor-appoint\user\one\book_appointment.php:169) in C:\Users\sb417\Downloads\v2\doctor-appoint\user\php\functions.php on line 278
+[14-Mar-2026 17:57:11 Asia/Manila] Redis initialization error: No connection could be made because the target machine actively refused it
+[14-Mar-2026 17:57:11 Asia/Manila] Rate limiting disabled - Redis not available
+[14-Mar-2026 17:57:23 Asia/Manila] Redis initialization error: No connection could be made because the target machine actively refused it
+[14-Mar-2026 17:57:23 Asia/Manila] Rate limiting disabled - Redis not available
+[14-Mar-2026 17:57:30 Asia/Manila] Redis initialization error: No connection could be made because the target machine actively refused it
+[14-Mar-2026 17:57:35 Asia/Manila] Redis initialization error: No connection could be made because the target machine actively refused it
+[14-Mar-2026 17:57:44 Asia/Manila] Redis initialization error: No connection could be made because the target machine actively refused it
+[14-Mar-2026 18:01:51 Asia/Manila] PHP Fatal error:  Cannot redeclare function updateAppointmentStatus() (previously declared in C:\Users\sb417\Downloads\v2\doctor-appoint\user\one\admin.php:374) in C:\Users\sb417\Downloads\v2\doctor-appoint\user\php\functions.php on line 382
+[14-Mar-2026 18:01:57 Asia/Manila] PHP Fatal error:  Cannot redeclare function updateAppointmentStatus() (previously declared in C:\Users\sb417\Downloads\v2\doctor-appoint\user\one\admin.php:374) in C:\Users\sb417\Downloads\v2\doctor-appoint\user\php\functions.php on line 382
+[14-Mar-2026 18:02:05 Asia/Manila] PHP Fatal error:  Cannot redeclare function updateAppointmentStatus() (previously declared in C:\Users\sb417\Downloads\v2\doctor-appoint\user\one\admin.php:374) in C:\Users\sb417\Downloads\v2\doctor-appoint\user\php\functions.php on line 382
+[14-Mar-2026 18:02:20 Asia/Manila] Redis initialization error: No connection could be made because the target machine actively refused it
+[14-Mar-2026 18:02:24 Asia/Manila] Redis initialization error: No connection could be made because the target machine actively refused it
+[14-Mar-2026 18:02:35 Asia/Manila] Redis initialization error: No connection could be made because the target machine actively refused it
+[14-Mar-2026 18:02:41 Asia/Manila] Redis initialization error: No connection could be made because the target machine actively refused it
+[14-Mar-2026 18:02:53 Asia/Manila] Redis initialization error: No connection could be made because the target machine actively refused it
+[14-Mar-2026 18:02:55 Asia/Manila] Redis initialization error: No connection could be made because the target machine actively refused it
+[14-Mar-2026 18:03:11 Asia/Manila] Redis initialization error: No connection could be made because the target machine actively refused it
+[14-Mar-2026 18:03:13 Asia/Manila] Redis initialization error: No connection could be made because the target machine actively refused it
+[14-Mar-2026 18:03:32 Asia/Manila] Redis initialization error: No connection could be made because the target machine actively refused it
+[14-Mar-2026 18:05:31 Asia/Manila] Redis initialization error: No connection could be made because the target machine actively refused it
+[14-Mar-2026 18:05:42 Asia/Manila] Redis initialization error: No connection could be made because the target machine actively refused it
+[14-Mar-2026 18:05:48 Asia/Manila] Redis initialization error: No connection could be made because the target machine actively refused it
+[14-Mar-2026 18:05:53 Asia/Manila] Redis initialization error: No connection could be made because the target machine actively refused it
+[14-Mar-2026 18:12:29 Asia/Manila] Redis initialization error: No connection could be made because the target machine actively refused it
+[14-Mar-2026 19:01:17 Asia/Manila] Redis initialization error: No connection could be made because the target machine actively refused it
+[14-Mar-2026 19:01:21 Asia/Manila] Redis initialization error: No connection could be made because the target machine actively refused it
+[14-Mar-2026 19:01:37 Asia/Manila] Redis initialization error: No connection could be made because the target machine actively refused it
+[14-Mar-2026 19:01:40 Asia/Manila] Redis initialization error: No connection could be made because the target machine actively refused it
+[14-Mar-2026 19:02:35 Asia/Manila] Redis initialization error: No connection could be made because the target machine actively refused it
+[14-Mar-2026 19:02:39 Asia/Manila] Redis initialization error: No connection could be made because the target machine actively refused it
+[14-Mar-2026 19:03:47 Asia/Manila] Redis initialization error: No connection could be made because the target machine actively refused it
+[14-Mar-2026 19:03:52 Asia/Manila] Redis initialization error: No connection could be made because the target machine actively refused it
+[14-Mar-2026 19:03:55 Asia/Manila] Redis initialization error: No connection could be made because the target machine actively refused it
+[14-Mar-2026 19:03:59 Asia/Manila] Redis initialization error: No connection could be made because the target machine actively refused it
+[14-Mar-2026 19:07:46 Asia/Manila] Redis initialization error: No connection could be made because the target machine actively refused it
+[14-Mar-2026 19:07:49 Asia/Manila] Redis initialization error: No connection could be made because the target machine actively refused it
+[14-Mar-2026 19:08:04 Asia/Manila] Redis initialization error: No connection could be made because the target machine actively refused it
+[14-Mar-2026 19:08:12 Asia/Manila] Redis initialization error: No connection could be made because the target machine actively refused it
+[14-Mar-2026 19:08:32 Asia/Manila] Redis initialization error: No connection could be made because the target machine actively refused it
+[14-Mar-2026 19:08:32 Asia/Manila] Rate limiting disabled - Redis not available
+[14-Mar-2026 19:11:18 Asia/Manila] Redis initialization error: No connection could be made because the target machine actively refused it
+[14-Mar-2026 19:11:18 Asia/Manila] Rate limiting disabled - Redis not available
+[14-Mar-2026 19:12:11 Asia/Manila] Appointment Data - Date: 2026-03-17, Time: 13:00, Reason: Feeling anxious and depressed.
+[14-Mar-2026 19:12:11 Asia/Manila] Combined DateTime: 2026-03-17 13:00:00
+[14-Mar-2026 19:12:11 Asia/Manila] Inserting - PatientID: 6, DoctorID: 15, 
+            DateTime: 2026-03-17 13:00:00, Reason: Feeling anxious and depressed.
+[14-Mar-2026 19:12:36 Asia/Manila] Redis initialization error: No connection could be made because the target machine actively refused it
+[14-Mar-2026 19:12:40 Asia/Manila] Redis initialization error: No connection could be made because the target machine actively refused it
+[14-Mar-2026 19:12:44 Asia/Manila] Redis initialization error: No connection could be made because the target machine actively refused it
+[14-Mar-2026 19:12:51 Asia/Manila] Redis initialization error: No connection could be made because the target machine actively refused it
+[14-Mar-2026 19:12:55 Asia/Manila] Redis initialization error: No connection could be made because the target machine actively refused it
+[14-Mar-2026 19:12:58 Asia/Manila] Redis initialization error: No connection could be made because the target machine actively refused it
+[14-Mar-2026 19:13:08 Asia/Manila] Redis initialization error: No connection could be made because the target machine actively refused it
+[14-Mar-2026 19:13:10 Asia/Manila] Redis initialization error: No connection could be made because the target machine actively refused it
+[14-Mar-2026 19:13:15 Asia/Manila] Redis initialization error: No connection could be made because the target machine actively refused it
+[14-Mar-2026 19:13:19 Asia/Manila] Redis initialization error: No connection could be made because the target machine actively refused it
+[14-Mar-2026 19:13:21 Asia/Manila] Redis initialization error: No connection could be made because the target machine actively refused it
+[14-Mar-2026 19:15:24 Asia/Manila] Redis initialization error: No connection could be made because the target machine actively refused it
+[14-Mar-2026 19:15:24 Asia/Manila] Rate limiting disabled - Redis not available
+[14-Mar-2026 19:16:21 Asia/Manila] Redis initialization error: No connection could be made because the target machine actively refused it
+[14-Mar-2026 19:16:21 Asia/Manila] Rate limiting disabled - Redis not available
+[14-Mar-2026 19:16:41 Asia/Manila] Appointment Data - Date: 2026-03-24, Time: 11:00, Reason: jhsvjafha
+[14-Mar-2026 19:16:41 Asia/Manila] Combined DateTime: 2026-03-24 11:00:00
+[14-Mar-2026 19:16:41 Asia/Manila] Inserting - PatientID: 6, DoctorID: 1, 
+            DateTime: 2026-03-24 11:00:00, Reason: jhsvjafha
+[14-Mar-2026 19:16:53 Asia/Manila] Redis initialization error: No connection could be made because the target machine actively refused it
+[14-Mar-2026 19:17:00 Asia/Manila] Redis initialization error: No connection could be made because the target machine actively refused it
+[14-Mar-2026 19:17:03 Asia/Manila] Redis initialization error: No connection could be made because the target machine actively refused it
+[14-Mar-2026 19:17:05 Asia/Manila] Redis initialization error: No connection could be made because the target machine actively refused it

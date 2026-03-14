@@ -241,13 +241,13 @@ document.addEventListener('DOMContentLoaded', function () {
     window.loadPatients = function (search) {
         const url = 'admin.php?action=patients' + (search ? '&search=' + encodeURIComponent(search) : '');
         const tbody = document.getElementById('patientsTableBody');
-        tbody.innerHTML = '<tr><td colspan="9" class="loading-state"><i class="fas fa-spinner fa-spin"></i> Loading...</td></tr>';
+        tbody.innerHTML = '<tr><td colspan="8" class="loading-state"><i class="fas fa-spinner fa-spin"></i> Loading...</td></tr>';
 
         fetch(url)
             .then(res => res.json())
             .then(patients => {
                 if (patients.length === 0) {
-                    tbody.innerHTML = '<tr><td colspan="9" class="empty-state">No patients found</td></tr>';
+                    tbody.innerHTML = '<tr><td colspan="8" class="empty-state">No patients found</td></tr>';
                     return;
                 }
 
@@ -280,7 +280,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 }).join('');
             })
             .catch(err => {
-                tbody.innerHTML = '<tr><td colspan="9" class="empty-state">Error loading patients</td></tr>';
+                tbody.innerHTML = '<tr><td colspan="8" class="empty-state">Error loading patients</td></tr>';
                 console.error(err);
             });
     }

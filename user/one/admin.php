@@ -128,22 +128,44 @@ function getAdminStats($pdo) {
 }
 
 function getDoctorsList($pdo, $search = '') {
-    $sql = "SELECT d.*, c.ClinicName, c.ClinicAddress 
+    // Use DISTINCT to ensure we don't get duplicate doctor records
+    $sql = "SELECT DISTINCT
+                d.DoctorID,
+                d.DoctorName,
+                d.DoctorEmail,
+                d.DoctorPhone,
+                d.DoctorGender,
+                d.Specialization,
+                d.LicenseNumber,
+                d.Bio,
+                d.Experience,
+                d.ConsultationFee,
+                d.DoctorCreated,
+                d.profile_picture,
+                c.ClinicName,
+                c.ClinicAddress,
+                c.ClinicLatitude,
+                c.ClinicLongitude
             FROM doctor d 
             LEFT JOIN clinic c ON d.DoctorID = c.DoctorID";
     $params = [];
 
     if (!empty($search)) {
-        $sql .= " WHERE d.DoctorName LIKE ? OR d.DoctorEmail LIKE ? OR d.Specialization LIKE ? OR d.LicenseNumber LIKE ?";
+        $sql .= " WHERE d.DoctorName LIKE ? 
+                  OR d.DoctorEmail LIKE ? 
+                  OR d.Specialization LIKE ? 
+                  OR d.LicenseNumber LIKE ?";
         $searchParam = "%{$search}%";
-        $params = [$searchParam, $searchParam, $searchParam, $searchParam];
+        $params = [
+            $searchParam, $searchParam, $searchParam, $searchParam
+        ];
     }
 
-    $sql .= " ORDER BY d.DoctorCreated DESC";
+    $sql .= " GROUP BY d.DoctorID ORDER BY d.DoctorCreated DESC"; // GROUP BY ensures uniqueness
 
     $stmt = $pdo->prepare($sql);
     $stmt->execute($params);
-    return $stmt->fetchAll();
+    return $stmt->fetchAll(PDO::FETCH_ASSOC);
 }
 
 function getPatientsList($pdo, $search = '') {

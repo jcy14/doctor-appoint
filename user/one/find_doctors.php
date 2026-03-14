@@ -54,76 +54,80 @@ try {
     $perPage = 10;
     
     // Build base query with pagination
-    $baseQuery = "
-        SELECT 
-            d.DoctorID,
-            d.DoctorName,
-            d.DoctorGender,
-            d.Specialization,
-            d.ConsultationFee,
-            d.Bio,
-            d.Experience,
-            d.profile_picture,
-            c.ClinicName,
-            c.ClinicAddress,
-            c.ClinicPhone,
-            (
-                SELECT MIN(a.AppointmentTime)
-                FROM appointment a
-                WHERE a.DoctorID = d.DoctorID
-                AND a.Status = 'scheduled'
-                AND a.AppointmentTime > CURRENT_TIMESTAMP()
-            ) as NextAvailable
-        FROM doctor d
-        LEFT JOIN clinic c ON d.DoctorID = c.DoctorID
-    ";
-    
-    // Count total records
-    $countQuery = "SELECT COUNT(*) FROM doctor d";
-    
-    $params = [];
-    $where = [];
+    // Build base query with pagination - Add DISTINCT to prevent duplicates
+$baseQuery = "
+    SELECT DISTINCT
+        d.DoctorID,
+        d.DoctorName,
+        d.DoctorGender,
+        d.Specialization,
+        d.ConsultationFee,
+        d.Bio,
+        d.Experience,
+        d.profile_picture,
+        c.ClinicName,
+        c.ClinicAddress,
+        c.ClinicPhone,
+        (
+            SELECT MIN(a.AppointmentTime)
+            FROM appointment a
+            WHERE a.DoctorID = d.DoctorID
+            AND a.Status = 'scheduled'
+            AND a.AppointmentTime > CURRENT_TIMESTAMP()
+        ) as NextAvailable
+    FROM doctor d
+    LEFT JOIN clinic c ON d.DoctorID = c.DoctorID
+";
 
-    // Add filters
-    if ($specialization) {
-        $where[] = "d.Specialization = :specialization";
-        $params[':specialization'] = $specialization;
-    }
-    
-    if ($gender) {
-        $where[] = "d.DoctorGender = :gender";
-        $params[':gender'] = $gender;
-    }
-    
-    // Add WHERE clause if filters exist
-    if (!empty($where)) {
-        $whereClause = " WHERE " . implode(" AND ", $where);
-        $baseQuery .= $whereClause;
-        $countQuery .= $whereClause;
-    }
+// Count total records - use COUNT DISTINCT to avoid counting duplicates
+$countQuery = "SELECT COUNT(DISTINCT d.DoctorID) FROM doctor d";
 
-    // Add sorting
-    switch ($sort) {
-        case 'availability':
-            $baseQuery .= " ORDER BY NextAvailable ASC";
-            break;
-        case 'price-low':
-            $baseQuery .= " ORDER BY d.ConsultationFee ASC";
-            break;
-        case 'price-high':
-            $baseQuery .= " ORDER BY d.ConsultationFee DESC";
-            break;
-        case 'experience':
-            $baseQuery .= " ORDER BY d.Experience DESC";
-            break;
-        default:
-            $baseQuery .= " ORDER BY d.DoctorName ASC";
-    }
-    
-    // Add pagination
-    $baseQuery .= " LIMIT :offset, :limit";
-    $params[':offset'] = ($page - 1) * $perPage;
-    $params[':limit'] = $perPage;
+$params = [];
+$where = [];
+
+// Add filters
+if ($specialization) {
+    $where[] = "d.Specialization = :specialization";
+    $params[':specialization'] = $specialization;
+}
+
+if ($gender) {
+    $where[] = "d.DoctorGender = :gender";
+    $params[':gender'] = $gender;
+}
+
+// Add WHERE clause if filters exist
+if (!empty($where)) {
+    $whereClause = " WHERE " . implode(" AND ", $where);
+    $baseQuery .= $whereClause;
+    $countQuery .= $whereClause;
+}
+
+// Add GROUP BY to ensure uniqueness (backup for DISTINCT)
+$baseQuery .= " GROUP BY d.DoctorID";
+
+// Add sorting
+switch ($sort) {
+    case 'availability':
+        $baseQuery .= " ORDER BY NextAvailable ASC";
+        break;
+    case 'price-low':
+        $baseQuery .= " ORDER BY d.ConsultationFee ASC";
+        break;
+    case 'price-high':
+        $baseQuery .= " ORDER BY d.ConsultationFee DESC";
+        break;
+    case 'experience':
+        $baseQuery .= " ORDER BY d.Experience DESC";
+        break;
+    default:
+        $baseQuery .= " ORDER BY d.DoctorName ASC";
+}
+
+// Add pagination
+$baseQuery .= " LIMIT :offset, :limit";
+$params[':offset'] = ($page - 1) * $perPage;
+$params[':limit'] = $perPage;
     
     // Get total count
     $countStmt = $pdo->prepare($countQuery);
